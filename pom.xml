@@ -2,15 +2,30 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.thinkgem.jeesite</groupId>
+  <groupId>com.ibase.mall</groupId>
   <artifactId>base-common</artifactId>
   <version>1.0</version>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <name>base-common</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
+  <distributionManagement>
+	<snapshotRepository>
+		<id>user-snapshot</id>
+		<name>User Porject Snapshot</name>
+		<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+		<uniqueVersion>true</uniqueVersion>
+	</snapshotRepository>
+	<repository>
+		<id>user-release</id>
+		<name>User Porject Release</name>
+		<url>http://localhost:8081/nexus/content/repositories/releases/</url>
+	</repository>
+</distributionManagement>
+  
   <dependencies>
 
     <dependency>
